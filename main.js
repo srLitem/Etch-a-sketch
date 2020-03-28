@@ -20,7 +20,7 @@ createButton.addEventListener('click', (e) => {
     // Change the color of the hovered blocks
     block_list.forEach((block) => {
         block.addEventListener('mouseover', (e) => {
-            block.style.backgroundColor = "blue";
+            block.style.backgroundColor = '#2f19ab';
         })
     })
 })

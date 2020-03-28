@@ -13,21 +13,22 @@ body {
     height: 400px;
     grid-template-columns: repeat(var(--numCol), auto);
     grid-template-rows: repeat(var(--numRow), auto);
-    grid-gap: 1px;
-    border-color: gray;
+    border-color: #2f19ab;
     border-radius: 10px;
     border-style: solid;
+    grid-gap: 1px;
 }
 .block {
-    background-color: red;
+    background-color: white;
     display: inline-block;
     transition: 0.4;
+    border-color: gray;
+    border-width: thin;
 }
 
 .block:hover {
     background-color: blue;
     transform: scale(1.15);;
-
 }
 
 #creator {
