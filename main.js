@@ -1,4 +1,4 @@
-// Obtaining the body from the document
+// Obtaining the elements from the document
 bodyDoc = document.querySelector('body');
 createButton = document.getElementById('creator');
 let block_list = [];
@@ -43,12 +43,32 @@ function createGrid(x, y) {
         newDiv.setAttribute('id', (i + 1));
         board.appendChild(newDiv);
     }
+
+    createCleanButton();
 }
 // Function to set the value of the main button
-function buttonText(){
-    if(document.getElementById('wrapper') == null){
+function buttonText() {
+    if (document.getElementById('wrapper') == null) {
         document.getElementById('creator').textContent = `Create a board`
-    }else {
+    } else {
         document.getElementById('creator').textContent = `New board`
     }
+}
+
+function createCleanButton() {
+    if (document.getElementById('clean') == null) {
+        let cleanButton = document.createElement('button');
+        cleanButton.setAttribute('id', 'clean');
+        cleanButton.classList.add('beauty');
+        cleanButton.textContent = "Clean";
+        let buttons = document.getElementById('button-row');
+        buttons.appendChild(cleanButton);
+
+        cleanButton.addEventListener('click', (e) => {
+            block_list.forEach((block) => {
+                block.style.backgroundColor = 'white';
+            })
+        })
+    }
+
 }
