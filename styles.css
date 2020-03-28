@@ -1,17 +1,25 @@
+:root {
+    --numCol: 0;
+    --numRow: 0;
+}
+
 .wrapper {
     display: grid;
+    grid-template-columns: repeat(var(--numCol), 20px);
+    grid-template-rows: repeat(var(--numRow), 20px);
+    grid-gap: 1px;
 }
-.square {
+.block {
     background-color: red;
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin: 5px;
+    transition: 0.4;
 }
 
-.square:hover {
+.block:hover {
     background-color: blue;
-    display: inline-block;
-    transform: scale(1.15);
-    margin: 5px;
+    transform: scale(1.15);;
+
 }
+
