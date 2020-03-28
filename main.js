@@ -3,6 +3,8 @@ bodyDoc = document.querySelector('body');
 createButton = document.getElementById('creator');
 let block_list = [];
 
+buttonText();
+
 // Board creation on click
 createButton.addEventListener('click', (e) => {
     // Clean board before adding a new one
@@ -23,9 +25,8 @@ createButton.addEventListener('click', (e) => {
             block.style.backgroundColor = '#2f19ab';
         })
     })
+    buttonText();
 })
-
-
 
 // Function created to generate the grid
 function createGrid(x, y) {
@@ -41,5 +42,13 @@ function createGrid(x, y) {
         newDiv.classList.add('block');
         newDiv.setAttribute('id', (i + 1));
         board.appendChild(newDiv);
+    }
+}
+// Function to set the value of the main button
+function buttonText(){
+    if(document.getElementById('wrapper') == null){
+        document.getElementById('creator').textContent = `Create a board`
+    }else {
+        document.getElementById('creator').textContent = `New board`
     }
 }
