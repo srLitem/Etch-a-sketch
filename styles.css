@@ -3,11 +3,18 @@
     --numRow: 0;
 }
 
-.wrapper {
-    display: grid;
+body {
+    text-align: center;
+}
+
+#wrapper {
+    display: inline-grid;
     grid-template-columns: repeat(var(--numCol), 20px);
     grid-template-rows: repeat(var(--numRow), 20px);
     grid-gap: 1px;
+    border-color: gray;
+    border-radius: 10px;
+    border-style: solid;
 }
 .block {
     background-color: red;
@@ -22,4 +29,25 @@
     transform: scale(1.15);;
 
 }
+
+#creator {
+	background-color:#4e45c7;
+	border-radius:28px;
+	border:1px solid #2f19ab;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:5px 10px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+    margin: 10px;
+}
+
+#creator:hover {
+	background-color:#6270cc;
+}
+
+
 
