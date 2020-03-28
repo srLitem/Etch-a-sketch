@@ -9,8 +9,10 @@ body {
 
 #wrapper {
     display: inline-grid;
-    grid-template-columns: repeat(var(--numCol), 20px);
-    grid-template-rows: repeat(var(--numRow), 20px);
+    width: 600px;
+    height: 400px;
+    grid-template-columns: repeat(var(--numCol), auto);
+    grid-template-rows: repeat(var(--numRow), auto);
     grid-gap: 1px;
     border-color: gray;
     border-radius: 10px;
@@ -19,8 +21,6 @@ body {
 .block {
     background-color: red;
     display: inline-block;
-    width: 20px;
-    height: 20px;
     transition: 0.4;
 }
 
